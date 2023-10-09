@@ -19,14 +19,16 @@ cd your-playwright-project
 npm install
 ```
 
-## Running the Tests
-You can execute the tests using npx or npm. Ensure you have configured the playwright.config.js file appropriately.
+2. Install Playwright and dependencies:
 
 ```bash
-npx playwright test --config=./playwright-test-js/playwright.config.js
-
+npx playwrigt install
+npx playwright install -deps
 ```
-or 
+
+## Running the Tests
+You can execute the tests using npm. Ensure you have configured the playwright.config.js file appropriately.
+
 ```bash
 npm test
 ```
