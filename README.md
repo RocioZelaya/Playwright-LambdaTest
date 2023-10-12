@@ -23,7 +23,7 @@ npm install
 
 ```bash
 npx playwrigt install
-npx playwright install -deps
+npx playwright install-deps 
 ```
 
 ## Running the Tests
