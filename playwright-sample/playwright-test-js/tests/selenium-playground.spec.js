@@ -12,8 +12,9 @@ test.beforeEach(async ({ page }) => {
 
 test('Test Scenario 1', async ({ page }) => {
 
-
     await page.getByRole('link', { name: 'Simple Form Demo' }).click();
+    await page.waitForTimeout(1000);
+
     const message = "Welcome to Lambda Test";
     await page.locator('[type="text"][id="user-message"]').fill(message);
     await page.locator('[id="showInput"]').click();
@@ -25,6 +26,8 @@ test('Test Scenario 1', async ({ page }) => {
 test('Test Scenario 2', async ({ page, browser }) => { 
  
     await page.getByRole('link', { name: 'Drag & Drop Sliders' }).click(); 
+    await page.waitForTimeout(1000);
+
     const slider = page.locator('#slider3', { visible: true }).getByRole('slider');
     slider.focus();  
 
@@ -44,6 +47,8 @@ test('Test Scenario 2', async ({ page, browser }) => {
 test('Test Scenario 3', async ({ page }) => {
 
     await page.getByRole('link', { name: 'Input Form Submit' }).click();
+    await page.waitForTimeout(1000);
+    
     await page.getByRole('button', { name: 'Submit' }).click();
 
     page.on('dialog', async (dialog) => {

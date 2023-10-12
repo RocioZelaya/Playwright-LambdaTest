@@ -1,7 +1,7 @@
 {
   "name": "lambdatest-playwright-sample",
   "scripts": {
-    "test": "npx playwright test --config=./playwright-test-js/playwright.config.js",
+    "test": "npx playwright test --config=./playwright-sample/playwright-test-js/playwright.config.js",
     "test-smartui": "node playwright-smartui.js",
     "test-parallel": "node playwright-parallel.js",
     "test-android": "node playwright-android-real-device.js",
