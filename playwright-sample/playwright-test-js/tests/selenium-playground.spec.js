@@ -14,11 +14,11 @@ test('Test Scenario 1', async ({ page }) => {
 
 
     await page.getByRole('link', { name: 'Simple Form Demo' }).click();
-    const message = "Welcome to Lambda Test"
+    const message = "Welcome to Lambda Test";
     await page.locator('[type="text"][id="user-message"]').fill(message);
     await page.locator('[id="showInput"]').click();
-    const outputMessage = await page.locator('[id="message"]').innerText();
-    await expect(outputMessage).toBe(message);
+    const outputMessage = await (await page.locator('[id="message"]')).innerText();
+    expect(outputMessage).toEqual(message);
 
 })
 
@@ -69,6 +69,6 @@ test('Test Scenario 3', async ({ page }) => {
 
 
     const successMessage = await page.locator('[class="success-msg hidden"]').innerText();
-    await expect(successMessage).toBe("Thanks for contacting us, we will get back to you shortly.");
+    expect(successMessage).toBe("Thanks for contacting us, we will get back to you shortly.");
 
 })
